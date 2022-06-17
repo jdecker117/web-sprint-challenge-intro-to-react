@@ -16,16 +16,21 @@ color: ghostwhite;
     padding: 20px;
     border: solid 2px green;
 }
+
+.bg-shading{
+    background-color: green
+    opacity: 0.5;
+}
 `
 
 export default function Character(props){
     const {info} = props;
     return (
-        <StyledCharacter>
-        <div className='character'>
-        <div className='info'>{info.name}</div>
-        <div className='info'>{info.birth_year}</div>
-        </div>
+        <StyledCharacter className='bg shading'>
+            <div className='character'>
+                <div className='info'>{info.name}</div>
+                <div className='info'>{info.birth_year}</div>
+            </div>
         </StyledCharacter>
     )
 }
